@@ -281,6 +281,9 @@ button[type=submit]:hover {
   border-radius: 15px;
   margin: 0 auto;
   color: #091f43;
+  overflow-y: scroll;
+  scrollbar-color: hsl(356, 71%, 75%) #fdd0d0 ;
+  scrollbar-width: thin;
 }
 .modal__content:last-child {
   padding-bottom: 20px;
@@ -407,6 +410,14 @@ button[type=submit]:hover {
   width: 100%;
   height: 100%;
   background: linear-gradient(135deg, #db6870, #091f43);
+}
+
+.cgu-link {
+  color: #091f43;
+}
+
+.cgu-link:hover {
+  color: #db6870;
 }
 
 /*# sourceMappingURL=style.css.map */

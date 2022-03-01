@@ -77,7 +77,7 @@ function validBox() {
 
 function redirection() {
    setTimeout(() => {
-      window.location.replace(`${window.location.origin}/P7_test/accueil.html?id=Sullivan`)
+      window.location.replace(`${window.location.origin}/P7_test/accueil.html?id=Maëva`)
    }, 500)
 }
 
