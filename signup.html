@@ -73,7 +73,7 @@
                   l’utilisateur accède au site et utilise ses services. <br>
                   Toute connexion au site est subordonnée au respect des présentes conditions. <br>
                   Pour l’utilisateur, le simple accès au site de <span> GroupyApp </span> à l’adresse URL suivante
-                  <span> https://app.groupy.fr </span> implique l’acceptation de l’ensemble des conditions décrites
+                  <a href="#"><span>https://app.groupy.fr</span></a> implique l’acceptation de l’ensemble des conditions décrites
                   ci-après.
                </p>
 
@@ -189,7 +189,9 @@
                   pour connaître de ce litige. <br>
                   Pour toute question relative aux présentes conditions d’utilisation du site, vous pouvez nous écrire à
                   l’adresse suivante : <br>
-                  <span> contact@groupy-app.fr </span>
+                  <a href="mailto:contact@groupy-app.fr">
+                     <span>contact@groupy-app.fr</span>
+                  </a>
                </p>
             </div>
          </div>
@@ -274,7 +276,7 @@
       function displaySignupValidity() {
          displayValidity(pseudo, regexTextNumbers, "pseudo")
          displayValidity(email, regexEmail, "email")
-         displayValidity(password, regexPassword, "mot de passe")
+         displayPasswordValidity(password, regexPassword)
       }
 
       function confirmPassword() {

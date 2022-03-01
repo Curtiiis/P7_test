@@ -56,7 +56,7 @@
 
    <script src="./auth-data.js"></script>
    <script>
-      
+
       // Form validation
       form.onsubmit = (e) => {
          e.preventDefault();
@@ -66,35 +66,30 @@
 
       //FUNCTIONS
       function checkInputsValidity() {
-      let checkInputsValidity =
-         regexEmail(email.value.trim()) &&
-         regexPassword(password.value.trim());
+         let checkInputsValidity =
+            regexEmail(email.value.trim()) &&
+            regexPassword(password.value.trim());
 
-      if (checkInputsValidity) {
-         let data = {
-            email: email.value.trim(),
-            password: password.value.trim()
-         };
-         console.log(data)
-         validBox()
-         redirection()
-         return true
+         if (checkInputsValidity) {
+            let data = {
+               email: email.value.trim(),
+               password: password.value.trim()
+            };
+            console.log(data)
+            validBox()
+            redirection()
+            return true
+         }
+         else {
+            return false
+         }
       }
-      else {
-         return false
-      }
-   }
 
       function displayLoginValidity() {
          displayValidity(email, regexEmail, "email")
          displayPasswordValidity(password, regexPassword)
       }
 
-      function displayPasswordValidity(element, regex) {
-    (!regex(element.value))
-       ? setError(element, `Le mot de passe doit contenir 8 caractères : 1 majuscule, 1 minscule, 1 chiffre, 1 caractère spécial.`)
-       : setSuccess(element);
- }
 
    </script>
 </body>
