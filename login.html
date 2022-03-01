@@ -87,8 +87,14 @@
 
       function displayLoginValidity() {
          displayValidity(email, regexEmail, "email")
-         displayValidity(password, regexPassword, "mot de passe")
+         displayPasswordValidity(password, regexPassword)
       }
+
+      function displayPasswordValidity(element, regex) {
+    (!regex(element.value))
+       ? setError(element, `Le mot de passe doit contenir 8 caractères : 1 majuscule, 1 minscule, 1 chiffre, 1 caractère spécial.`)
+       : setSuccess(element);
+ }
 
    </script>
 </body>
