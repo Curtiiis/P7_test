@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Login</title>
+
+   <link rel="stylesheet" href="./style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+
+<body>
+
+   <div class="login">
+      <div class="login_box">
+         <div class="title">
+            <a href="./index.html">
+               <img src="./public/img/logo-degrade-1-small.png" alt="logo groupy" width="50px" height="50px">
+            </a>
+            <h1>GROUPY <span>App</span></h1>
+            <h2>Connexion</h2>
+         </div>
+
+
+         <form id="form" method="post" action="/">
+            <div class="form-group">
+               <input type="text" id="email" name="email" required>
+               <label for="email">Email</label>
+               <span></span>
+               <div class="error"></div>
+            </div>
+            <div class="form-group">
+               <input type="password" id="password" name="password" required>
+               <label for="password">Mot de passe</label>
+               <i class="far fa-eye" id="togglePassword"></i>
+               <span></span>
+               <div class="error"></div>
+            </div>
+            <!-- <p class="pass">Mot de passe oublié ?</p> -->
+            <button type="submit" id="submit-btn">Se connecter</button>
+            <a href="./forgot-password.html" class="pass">Mot de passe oublié ?</a>
+         </form>
+
+         <div class="signup_link">
+            Vous n'avez pas encore de compte ? <br> <a href="./signup.html">Inscrivez-vous</a>
+         </div>
+
+      </div>
+   </div>
+
+   <div class="validated-box">
+      <img src="./public/img/checked.png" alt="">
+   </div>
+
+   <script src="./auth-data.js"></script>
+   <script>
+      
+      // Form validation
+      form.onsubmit = (e) => {
+         e.preventDefault();
+         checkInputsValidity()
+         displayLoginValidity()
+      }
+
+      //FUNCTIONS
+      function checkInputsValidity() {
+      let checkInputsValidity =
+         regexEmail(email.value.trim()) &&
+         regexPassword(password.value.trim());
+
+      if (checkInputsValidity) {
+         let data = {
+            email: email.value.trim(),
+            password: password.value.trim()
+         };
+         console.log(data)
+         validBox()
+         redirection()
+         return true
+      }
+      else {
+         return false
+      }
+   }
+
+      function displayLoginValidity() {
+         displayValidity(email, regexEmail, "email")
+         displayValidity(password, regexPassword, "mot de passe")
+      }
+
+   </script>
+</body>
+
+</html>
